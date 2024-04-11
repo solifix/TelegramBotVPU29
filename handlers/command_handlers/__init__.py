@@ -1,3 +1,3 @@
 from .hello_handler import HelloHandler
 from .start_handler import StartHandler
-from .by_handler import ByHandler
+from .bye_handler import ByeHandler

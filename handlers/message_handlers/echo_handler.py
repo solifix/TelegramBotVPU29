@@ -7,7 +7,7 @@ from handlers.base_handler import BaseHandler
 class EchoHandler(BaseHandler):
     @classmethod
     def register(cls, app):
-        contact_handler = MessageHandler(filters.TEXT & ~filters.COMMAND, cls.callback)
+        contact_handler = MessageHandler(filters.Regex(r'^echo\s+(.*)$'), cls.callback)
         app.add_handler(contact_handler)
 
     @staticmethod
